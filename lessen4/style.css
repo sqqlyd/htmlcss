@@ -1,0 +1,120 @@
+/*
+セレクタ
+a, b     a要素と b要素　に適用のスタイル
+a b　　　　a要素したにあるすべての要素ｂに適用のスタイル
+a > b　　　要素a直下したの要素bに適用のスタイル
+a + b　　　要素a後ろの要素ｂに適用のスタイル
+a.b       要素aのクラスbのスタイル
+*/
+
+
+/* h1,
+p {
+    color: lightblue
+} */
+
+
+/* div span {
+    color: orange;
+} */
+
+
+/* div>span {
+    color: lightcoral
+} */
+
+
+/* p+p {
+    color: blueviolet;
+} */
+
+p.points {
+    color: yellowgreen;
+}
+
+
+/* 属性セレクタ*/
+
+a[title] {
+    color: skyblue;
+}
+
+a[class~="search"] {
+    color: violet;
+}
+
+a[href="http://google.co.jp"] {
+    color: orange;
+}
+
+
+/*
+セレクタ
+似クラス
+*/
+
+ul li:first-child {
+    color: skyblue;
+}
+
+a:link {
+    color: violet;
+}
+
+a:visited {
+    color: orange;
+}
+
+a:hover {
+    color: pink;
+}
+
+a:active {
+    color: rebeccapurple;
+}
+
+input:focus {
+    background-color: yellowgreen;
+}
+
+p::first-line {
+    color: lightgreen;
+}
+
+p::before {
+    content: "--> ";
+}
+
+p::after {
+    content: " <--";
+}
+
+
+/*
+セレクタ詳細度　優先度
+
+[!important] >a>b>c>d
+
+(a)style =""
+(b)id
+(c)属性・似クラス
+(d)要素・似要素
+
+---------------------css
+a{color : skyblue;}
+
+a.link{color : pink;}
+
+a.search{color : orangle;}
+
+a#site{color : blue;}
+
+-----------------------html
+<a href="http://google.co.jp" class="link search" id="site" style"color:green;">
+ to google
+</a>
+
+
+
+
+*/

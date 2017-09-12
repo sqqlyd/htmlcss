@@ -1,0 +1,180 @@
+@charset "utf-8"
+/* common style */
+
+body {
+    font-size: 12px;
+    font-family: Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #B9D871;
+}
+
+p {
+    line-height: 2;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+section {
+    padding: 5% 0;
+}
+
+section h2 {
+    text-align: center;
+    margin: 0 0 5%;
+}
+
+section:nth-child(even) {
+    background: #EDF7D9;
+}
+
+.features img {
+    width: 100%;
+}
+
+.features .item {
+    margin-bottom: 2%;
+}
+
+.features .item:last-child {
+    margin-bottom: 0;
+}
+
+.news .item {
+    text-align: center;
+}
+
+.news p {
+    text-align: left;
+}
+
+.news img {
+    width: 100%;
+}
+
+.news .item {
+    margin-bottom: 2%;
+}
+
+.news .item:last-child {
+    margin-bottom: 0;
+}
+
+.how-to-use iframe {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.iframe-wrapper {
+    padding-bottom: 56.25%;
+    height: 0;
+    background: pink;
+    position: relative;
+}
+
+
+/* header */
+
+.header-mobile-menu {
+    float: right;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+@media (min-width:769px) {
+    /* body {
+        background: #C3E6F7;
+    } */
+    .features p {
+        width: 45%;
+    }
+    .features img {
+        width: 50%;
+    }
+    .pull-left {
+        float: left;
+        padding-right: 5%;
+    }
+    .pull-right {
+        float: right;
+        padding-left: 5%;
+    }
+    .features .item {
+        overflow: hidden;
+    }
+    .news .container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .news .item {
+        width: 30%;
+    }
+    .news .item img {
+        width: 100%;
+    }
+}
+
+
+/* tablet */
+
+@media (max-width:768px) {
+    body {
+        background: #71D8CF;
+    }
+}
+
+
+/* phone */
+
+@media (max-width:640px) {
+    body {
+        background: #BD2296;
+    }
+}
+
+
+/* 
+　　◆◆◆ディバイス幅HTML中の書き方◆◆◆
+
+<link rel="stylesheet" href="desktop.css" media="(min-width:769px)">
+<link rel="stylesheet" href="tablet.css"  media="(max-width:768px) and (min-width: 321px)">
+<link rel="stylesheet" href="mobile.css"  media="(max-width:320px)"> 
+
+@import url(style.css) screen and (min-width: 769px);
+@import url(tablet.css) screen and (max-width: 768px);
+@import url(smart.css) screen and (max-width: 640px);
+
+//pc用のcssを記述
+@media screen and (min-width:961px) {}
+
+//tablet用のcssを記述
+@media only screen and (min-width:376px) and (max-width:960px) {
+}
+
+//スマホ用のcssを記述
+@media screen and (max-width:375px) {
+}
+
+
+*/
+
+
+/* ーーーー
+<div class="sp_contents"><img src="/img/example_01.gif"></div>
+<div class="pc_contents"><img src="/img/example_02.gif"></div>
+
+@media screen and (min-width:376px) {
+.sp_contents {display:none;} //横幅376px以上では表示しない
+}
+  
+@media screen and (max-width:375px) {
+.pc_contents {display:none;} //横幅375px以下では表示しない
+} 
+
+*/
